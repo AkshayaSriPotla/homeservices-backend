@@ -16,6 +16,7 @@
     <groupId>com.hss</groupId>
     <artifactId>homeservices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
     <name>homeservices</name>
     <description>Home Services Project with Mobile Login</description>
 
@@ -114,12 +115,6 @@
             <optional>true</optional>
         </dependency>
 
-		<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <scope>test</scope>
-</dependency>
-
         <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -135,12 +130,16 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <packaging>war</packaging>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 
 </project>
